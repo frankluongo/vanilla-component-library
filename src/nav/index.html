@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <header class="app-header" data-nav-wrapper>
+      <nav class="desktop-nav">
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
+        <a href="/">Projects</a>
+      </nav>
+      <button class="nav-open" type="button" data-mobile-nav-open>
+        Open navigation
+      </button>
+      <div class="mobile-nav-wrapper" data-mobile-nav data-is-open="false">
+        <header class="mobile-nav-header">
+          <button type="button" data-mobile-nav-close>Close navigation</button>
+        </header>
+        <nav class="mobile-nav-nav">
+          <a href="/">Home</a>
+          <a href="/">About</a>
+          <a href="/">Contact</a>
+          <a href="/">Projects</a>
+        </nav>
+        <footer class="mobile-nav-footer">
+          <button type="buton" data-mobile-nav-close>Close nav</button>
+        </footer>
+      </div>
+    </header>
+    <main>Website Content</main>
+    <footer>Website footer</footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
