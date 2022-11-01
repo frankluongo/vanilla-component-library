@@ -1,0 +1,13 @@
+.menu-item {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+
+  position: absolute;
+}
+
+.menu-item-has-children[aria-expanded=true] .sub-menu {
+  display: block;
+}
