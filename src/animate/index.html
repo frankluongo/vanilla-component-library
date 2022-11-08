@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate</title>
+    <link rel="stylesheet" href="./app.scss" />
+  </head>
+  <body>
+    <header data-dropdown=".menu-item-has-children">
+      <ul class="dropdown-menu">
+        <li class="menu-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="menu-item menu-item-has-children">
+          <a
+            href="/classes"
+            data-trigger='[
+          {"evt": "mouseover", "action": "subMenuOpen"},
+          {"evt": "mouseleave", "action": "subMenuClose"}
+        ]'
+            >Classes</a
+          >
+          <ul
+            class="sub-menu"
+            data-animate='{
+              "animateHeight": true,
+              "speed": 250,
+              "start": "subMenuOpen",
+              "stop": "subMenuClose"
+            }'
+          >
+            <li class="menu-item">
+              <a href="/class-type-i/">Class Type I</a>
+            </li>
+            <li class="menu-item">
+              <a href="/class-type-ii/">Class Type II</a>
+            </li>
+            <li class="menu-item">
+              <a href="/class-type-iii/">Class Type III</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

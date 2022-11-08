@@ -1,0 +1,52 @@
+@import "../_shared/styles";
+
+.sub-menu {
+  --speed: 0;
+  position: absolute;
+
+  padding: 1rem;
+
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  opacity: 0;
+  overflow: hidden;
+  transition: height var(--speed) ease-in-out, opacity var(--speed) ease-in-out;
+}
+
+.sub-menu li + li {
+  margin-top: 0.5rem;
+}
+
+.sub-menu[data-animation-state=INITIAL] {
+  --speed: 250ms;
+  height: 0;
+
+  display: block;
+  transition: none;
+}
+
+.sub-menu[data-animation-state=START] {
+  --speed: 250ms;
+  display: block;
+  height: 0;
+}
+
+.sub-menu[data-animation-state=ANIMATING] {
+  --speed: 250ms;
+  display: block;
+  height: var(--height);
+  
+  opacity: 1;
+}
+
+.sub-menu[data-animation-state=FINISHED],
+.sub-menu:focus,
+.sub-menu:focus-within {
+  --speed: 250ms;
+  display: block;
+  height: var(--height);
+
+  opacity: 1;
+}
